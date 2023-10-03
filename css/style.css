@@ -85,7 +85,7 @@
  .box-content2{
     border-left: 1px #CCC solid ;
     border-right: 1px #CCC solid;
-    min-height: 200px;
+    background-color: #EEE;
  }
 
  .box-footer{
@@ -93,7 +93,10 @@
     background-color:  #EEE;
     border-bottom-left-radius:5px ;
     border-bottom-right-radius: 5px;
-    border: 1px #CCC solid ;
+    border-left: 1px #CCC solid ;
+    border-right: 1px #CCC solid ;
+    border-bottom: 1px #CCC solid ;
+
  }
 
  .banner{
@@ -162,6 +165,14 @@ font-size: 0.9vw;
    padding: 5px 10px;
    border-radius:  5px;
 }
+
+.formcontend input[type = "text"]
+{
+   width: 100%;
+   border:  1px solid #CCC;
+   padding: 5px 10px;
+   border-radius:  5px;
+}
 .formtaikhoan input[type = "password"]{
    width: 100%;
    border:  1px solid #CCC;
@@ -171,13 +182,20 @@ font-size: 0.9vw;
 .formtaikhoan input [type = "checkbox"]{
    border-radius: 5px;
 }
-.formtaikhoan input [type = "submit"]{
+.formtaikhoan input [type = "submit"],
+.formcontend input[type = "submit"],
+.formcontend input[type = "reset"],
+.formcontend input[type = "button"]
+{
    border-radius: 5px;
    padding: 5px 10px;
    background-color: white;
    border:  1px solid #CCC;
 }
-.formtaikhoan input [type = "submit"]:hover{
+.formtaikhoan input [type = "submit"]:hover, 
+.formcontend input [type = "submit"]:hover, 
+.formcontend input [type = "reset"]:hover,
+.formcontend input [type = "button"]:hover{
    background-color: #CCC;
 }
 
@@ -190,4 +208,65 @@ font-size: 0.9vw;
 .formtaikhoan li a:hover{
    color: #060;
    text-decoration: none;
+}
+/* menu dọc*/
+.menudoc ul{
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+}
+.menudoc ul li{
+padding: 10px 20px; background-color:#FFF;
+border-bottom: 1px #CCC solid;
+}
+.menudoc ul li a { color: #666;
+   text-decoration: none;
+}
+.menudoc ul li:hover { 
+   background-color: #CCC;
+}
+.searbox input[type="text"] 
+{ width: 100%;
+  padding: 5px 10px; 
+  background-color:#FFF; 
+  border: 1px #CCC solid; 
+  border-radius: 5px;
+  
+} 
+.top10 img{
+width: 20%;
+height: 50px;
+float: left;
+margin-right: 10px;
+border-radius: 5px;
+border: 1px solid #CCC;
+}
+.top10 a {
+   color: #666; 
+   text-decoration: none; 
+}
+.tople a:hover { 
+   color: #008;
+   text-decoration: underline; 
+}
+/* Admin"*/
+.headeradmin{
+background-color: #EEE;
+border: 1px #CCC solid;
+color: #666;
+border-radius: 5px;
+padding: 0px 20px;
+}
+.headeradmin H1{
+   font-size: 2vw;
+}
+.formtitle{
+background-color: #EEE;
+border: 1px #CCC solid;
+color: #666;
+border-radius: 5px;
+padding: 0px 20px;
+}
+.formcontend{
+   padding: 20px 0px;
 }

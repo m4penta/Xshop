@@ -45,6 +45,7 @@ include "header.php";
                 $thongbao="Cập nhật thành công";
             }
                 $listdanhmuc= loadall_danhmuc();
+                
                 include "./danhmuc/list.php"; 
                 break;
             /*contronlier sản phẩm*/ 

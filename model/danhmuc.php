@@ -23,6 +23,6 @@ function loadone_danhmuc($id){
 
 function update_danhmuc($id,$tenloai){
     $sql="update danhmuc set name= '".$tenloai."' where id=".$id;
-    ($sql);
+    pdo_execute($sql);
 }
 ?>

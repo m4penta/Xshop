@@ -3,17 +3,24 @@
         <H1> THÊM MỚI SẢN PHẨM </H1>
     </div>
     <div class="row formcontend">
-        <form action="index.php?act=addsp" method="post" enctype="multipart/from-data" >
+        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data" >
             <div class="row mb10">
-                Mã sản phẩm:<br>
-                <input type="text" name="masp" disabled>
+                Danh mục<br>
+                <select name="iddm" >
+                    <?php 
+                    foreach ($listdanhmuc as $danhmuc){
+                        extract($danhmuc);
+                        echo '<option value="'.$id.'">"'.$name.'"</option>';
+                    }
+                    ?>
+                </select>
             </div>
             <div class="row mb10">
                 Tên sản phẩm:<br>
                 <input type="text" name="tensp"> 
             </div>
             <div class="row mb10">
-                Gía:<br>
+                Giá:<br>
                 <input type="text" name="giasp"> 
             </div>
             <div class="row mb10">

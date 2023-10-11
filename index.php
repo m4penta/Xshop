@@ -1,7 +1,9 @@
 <?php
+session_start();
 include "./model/pdo.php";
 include "./model/sanpham.php";
 include "./model/danhmuc.php";
+include "./model/taikhoan.php";
 include "view/header.php";
 include "./global.php";
 
@@ -42,6 +44,31 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 include "./view/home.php";
             }
 
+            break;
+        case 'dangky':
+            if(isset($_POST['dangky'])&& ($_POST['dangky'])){
+                $email =$_POST['email'];
+                $user =$_POST['user'];
+                $pass =$_POST['pass'];
+                insert_taikhoan($email,$user,$pass);
+                $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng ";
+            }
+                include "view/taikhoan/dangky.php";
+                break;
+        case 'dangnhap':
+            if(isset($_POST['dangnhap'])&& ($_POST['dangnhap'])){
+                $user =$_POST['user'];
+                $pass =$_POST['pass'];
+                $checkuser=checkuser($user,$pass);
+                if(is_array($checkuser)){
+                    $_SESSION['user']=$checkuser;
+                    // $thongbao="Bạn đã đăng nhập thành công!";
+                    header('Location: index.php');
+                }else{
+                $thongbao="Tài khoản không tồn tại. Vui lòng kiểm tra hoặc đăng ký! ";
+            }
+        }
+            include "view/taikhoan/dangky.php";
             break;
         case 'gioithieu':
             include "view/gioithieu.php";

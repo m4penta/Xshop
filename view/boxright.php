@@ -1,30 +1,50 @@
 <div class="row mb">
     <div class="box-title">TÀI KHOẢN</div>
     <div class="box-content formtaikhoan">
-        <form action="#" method="post">
+        <?php 
+        if(isset($_SESSION['user'])){
+            extract($_SESSION['user']);
+        ?>
+        <div class="row mb10">
+                Xin chào<br />
+            <?=$user?>
+            </div>
+
+            <div class="row mb10">
+            <li><a href="index.php?act=quenmk">Quên mật khẩu</a></li>
+            <li><a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li> 
+            <li><a href="admin/index.php">Đăng nhập Admin</a></li> 
+            <li><a href="index.php?act=thoat">Thoát</a></li> 
+
+            </div>
+        <?php 
+        }else{
+        ?>
+        <form action="index.php?act=dangnhap" method="post">
 
             <div class="row mb10">
                 Tên đăng nhập<br />
-                <input type="text" name="user" id="" />
+                <input type="text" name="user"  />
             </div>
 
             <div class="row mb10">
                 mật khẩu <br />
-                <input type="password" name="pass" id="" />
+                <input type="password" name="pass"  />
             </div>
 
             <div class="row mb10">
-                <input type="checkbox" style="margin-bottom: 0px;" name="user" id="" />
+                <input type="checkbox" style="margin-bottom: 0px;" name="user"  />
                 <label for="">Ghi nhớ tài khoản ?</label>
             </div>
 
             <div class="row mb10">
-                <input type="submit" value="Đăng nhập" />
+                <input type="submit" value="Đăng nhập" name="dangnhap" />
             </div>
 
         </form>
         <li><a href="#">Quên mật khẩu</a></li>
-        <li><a href="#">Đăng kí thành viên</a></li>
+        <li><a href="index.php?act=dangky">Đăng kí thành viên</a></li>
+        <?php }?>
     </div>
 </div>
 <div class="row mb">

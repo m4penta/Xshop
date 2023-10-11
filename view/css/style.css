@@ -157,6 +157,12 @@ a {
 .formtaikhoan {
   line-height: 150%;
 }
+.formtaikhoan input[type="email"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 .formtaikhoan input[type="text"] {
   width: 100%;
@@ -165,12 +171,14 @@ a {
   border-radius: 5px;
 }
 
+
 .formcontend input[type="text"] {
   width: 100%;
   border: 1px solid #ccc;
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 .formtaikhoan input[type="password"] {
   width: 100%;
   border: 1px solid #ccc;
@@ -397,4 +405,7 @@ a {
 }
 .spct img {
   width: 50%;
+}
+.thongbao{
+  color:red;
 }

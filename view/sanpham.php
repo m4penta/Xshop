@@ -9,7 +9,7 @@
                 $i = 0;
                 foreach ($dssp as $sp) {
                   extract($sp);
-                  $linksp = "index.php?act=sanphamct&idsp=".$id;
+                  $linksp = "index.php?act=sanphamczt&idsp=".$id;
                   $hinh = $img_path.$img;
                   if (($i == 2) || ($i == 5) ||($i == 8) || ($i == 11)) {
                     $mr = "";

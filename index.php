@@ -30,7 +30,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             $dssp= loadall_sanpham($kyw,$iddm);
             $tendm =load_ten_dm($iddm);
-            include "../Main-duanmau/view/sanpham.php";
+            include "./view/sanpham.php";
             break;
         case 'sanphamct':
             if ((isset($_GET['idsp'])) && ($_GET['idsp'] > 0)) {

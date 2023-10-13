@@ -14,11 +14,14 @@
                 ?>
             </div>
         </div>
-        <div class="row">
 
-            <div class="box-title"> BÌNH LUẬN</div>
-            <div class="row box-content">
-            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script>
+          $(document).ready(function(){
+             $("#binhluan").load("view/binhluan/binhluanform.php", {idpro: <?=$id?>}); }); 
+             </script>
+        <div class="row" id="binhluan">
+            
         </div>
         <div class="row">
             <div class="box-title"> SẢN PHẨM CÙNG LOẠI</div>

@@ -1,4 +1,9 @@
 <?php 
+function loadall_taikhoan(){
+    $sql= "select * from taikhoan order by id desc ";
+    $listtaikhoan= pdo_query($sql);
+    return $listtaikhoan;
+}
 function insert_taikhoan($email,$user,$pass){
     $sql="insert into taikhoan(email,user,pass) values('$email','$user','$pass')";
     pdo_execute($sql);

@@ -3,6 +3,8 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/taikhoan.php";
+
 include "header.php";
  //routing -- đây là đoạn code tạo đường dẫn thư mục dựa theo thẻ url, có thể kiểm tra thẻ <ul> theo đường dẫn admin/header.php
  if (isset($_GET['act'])) {
@@ -122,7 +124,10 @@ include "header.php";
                     $listsanpham= loadall_sanpham();
                     include "./sanpham/list.php";
                     break;
-
+                case 'dskh':
+                     $listtaikhoan= loadall_taikhoan();
+                        include "./taikhoan/list.php"; 
+                        break;
         default:
             include "home.php";
             break;

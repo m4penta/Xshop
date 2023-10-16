@@ -30,7 +30,7 @@
                 <div class="row mb10">
 
                     Điện thoại
-                <input type="password" name="tel" value="<?=$tel?>">
+                <input type="text" name="tel" value="<?=$tel?>">
                 </div>
                 <div class="row mb10">
                     

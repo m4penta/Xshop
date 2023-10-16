@@ -1,8 +1,8 @@
 <div class="row">
-            <div class="row formtitle">
+            <div class="row frmtitle">
             <H1> DANH SÁCH TÀI KHOẢN </H1> 
             </div>
-            <div class="row formcontend">
+            <div class="row frmcontend">
 
                 <div class="row mb10 frmdsloai">
                     <table>
@@ -31,7 +31,7 @@
                             <td>'.$email.'</td>
                             <td>'.$address.'</td>
                             <td>'.$tel.'</td>
-                            <td>'.$role.'</td>
+                            <td>'.$role.'</td> 
 
                             <td><a href="'.$suatk.'"><input type="button" value="Sửa"> </a> <a href="'.$xoatk.'"><input type="button" value="Xóa"></a></td>
                             </tr>'; 
@@ -41,7 +41,11 @@
                     </table>
                 </div>
                 <div class="row mb10">
-                   <a href="index.php?act=addm"> 
+                    <input type="button" value= "chọn tất cả">
+                    <input type="button" value= "bỏ chọn tất cả">
+                    <input type="button" value= "xóa tất cả các mục đã chọn">
+                    
+                   <a href="index.php?act=addm" input type="button" value="Nhập thêm"></a>
                 </div>
             </div>
         </div>

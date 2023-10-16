@@ -55,6 +55,16 @@
               <div class="row img"><a href="' . $linksp . '" style = "text-decoration: none;"><img src="' . $hinh . '"/></a></div>
               <p>$' . $price . '</p>
               <a href="' . $linksp . '" style = "text-decoration: none;">' . $name . '</a>
+
+              <div action="row btnaddtocart">
+              <from action="index.php?act=addcart" method="post">
+                <input type="hidden" name ="id" value="'.$id.'">
+                <input type="hidden" name ="name" value="'.$name.'">
+                <input type="hidden" name ="img" value="'.$img.'">
+                <input type="hidden" name ="price" value="'.$price.'">
+                <input type="submit" name ="addtocart" value="thêm vào giỏ hàng">
+              </from>
+              </div>
         </div>';
         $i += 1;
       }
